@@ -295,16 +295,9 @@ export const CurrentUserBadge = (props: {
                     marginBottom: 10,
                   }}
                 >
-                  <Button
-                    className="metaplex-button-default"
-                    onClick={() => setShowAddFundsModal(true)}
-                    style={btnStyle}
-                  >
-                    Add Funds
-                  </Button>
                   &nbsp;&nbsp;
                   <Button
-                    className="metaplex-button-default"
+                    className="metaplex-button-default discon"
                     onClick={disconnect}
                     style={btnStyle}
                   >
@@ -413,11 +406,7 @@ export const Cog = () => {
             </Button>
           </div>
         }
-      >
-        <Button className="wallet-key">
-          <img src="/cog.svg" />
-        </Button>
-      </Popover>
+      ></Popover>
     </div>
   );
 };

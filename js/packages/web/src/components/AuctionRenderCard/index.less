@@ -52,13 +52,19 @@
 }
 
 .auction-render-card {
-  min-width: 200px;
-  width: 100%;
+  display: flex;
   height: 100%;
-  filter: drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.1));
-  border-radius: 12px;
-  // border: 0px;
-  overflow: hidden;
+  flex-direction: column;
+  align-items: flex-start;
+  background: rgba(0, 0, 0, 0.77);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgb(0 0 0 / 10%);
+  backdrop-filter: blur(7.1px);
+  -webkit-backdrop-filter: blur(7.1px);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  padding: 0;
+  text-align: left;
+  border-radius: 0;
 
   .ant-card-body {
     display: flex;
@@ -67,8 +73,6 @@
     align-items: flex-start;
     padding: 0;
     text-align: left;
-
-    background: #1e1e1e;
     border-radius: 0;
   }
 
@@ -132,12 +136,14 @@
   }
 
   .card-art-info {
-    background: @grey-100;
-    border-radius: 0 0 12px 12px;
+    padding: 20px;
+    border-radius: 20px;
     width: 100%;
     height: 100%;
+    padding-bottom: 0px !important;
 
-    .pack-gray-wrapper, .auction-gray-wrapper {
+    .pack-gray-wrapper,
+    .auction-gray-wrapper {
       padding: 16px;
       border-radius: 12px;
       background: @grey-60;

@@ -124,17 +124,12 @@ export const AppBar = () => {
     <>
       <MobileNavbar />
       <div id="desktop-navbar">
-        <div className="app-left">
-          <LogoLink />
-          &nbsp;&nbsp;&nbsp;
-          <MetaplexMenu />
-        </div>
-        <div className="app-right">
+        <div className="app-center">
+          <h1>Welcome to Duck Patrol Auction off</h1>
           {!connected && (
-            <HowToBuyModal buttonClassName="modal-button-default" />
-          )}
-          {!connected && (
-            <ConnectButton style={{ height: 48 }} allowWalletChange />
+            <div className="walletwrap">
+              <ConnectButton style={{ height: 48 }} allowWalletChange />
+            </div>
           )}
           {connected && (
             <>

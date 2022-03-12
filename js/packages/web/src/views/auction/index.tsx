@@ -274,7 +274,12 @@ export const AuctionView = () => {
     );
   } else {
     return (
-      <Row justify="center" ref={ref} gutter={[48, 0]}>
+      <Row
+        className="singleauction"
+        justify="center"
+        ref={ref}
+        gutter={[48, 0]}
+      >
         <Col span={24} md={10} className={'img-cont-500'}>
           <div className="auction-view" style={{ minHeight: 300 }}>
             <Carousel
