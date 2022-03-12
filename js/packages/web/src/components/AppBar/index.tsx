@@ -125,7 +125,7 @@ export const AppBar = () => {
       <MobileNavbar />
       <div id="desktop-navbar">
         <div className="app-center">
-          <h1>Welcome to Duck Patrol Auction off</h1>
+          <h1>Duck Patrol Auction House</h1>
           {!connected && (
             <div className="walletwrap">
               <ConnectButton style={{ height: 48 }} allowWalletChange />

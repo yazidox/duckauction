@@ -2,12 +2,8 @@ import React from 'react';
 import { Card, CardProps } from 'antd';
 import { ArtContent } from '../ArtContent';
 import { AuctionView, useArt, useCreators } from '../../hooks';
-import { AmountLabel } from '../AmountLabel';
 import { MetaAvatar } from '../MetaAvatar';
 import { AuctionCountdown } from '../AuctionNumbers';
-
-import { useAuctionStatus } from './hooks/useAuctionStatus';
-import { useTokenList } from '../../contexts/tokenList';
 
 export interface AuctionCard extends CardProps {
   auctionView: AuctionView;
@@ -19,11 +15,6 @@ export const AuctionRenderCard = (props: AuctionCard) => {
   const art = useArt(id);
   const creators = useCreators(auctionView);
   const name = art?.title || ' ';
-
-  const tokenInfo = useTokenList().subscribedTokens.filter(
-    m => m.address == auctionView.auction.info.tokenMint,
-  )[0];
-  const { status, amount } = useAuctionStatus(auctionView);
 
   const card = (
     <Card hoverable={true} className={`auction-render-card`} bordered={false}>
@@ -56,16 +47,6 @@ export const AuctionRenderCard = (props: AuctionCard) => {
             </div>
           )}
         </div>
-      </div>
-      <div className="card-bid-info">
-        <span className={'text-uppercase info-message'}>{status}</span>
-        <AmountLabel
-          containerStyle={{ flexDirection: 'row' }}
-          title={status}
-          amount={amount}
-          iconSize={24}
-          tokenInfo={tokenInfo}
-        />
       </div>
     </Card>
   );

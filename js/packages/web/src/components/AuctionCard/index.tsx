@@ -697,9 +697,7 @@ export const AuctionCard = ({
                   textTransform: 'uppercase',
                   color: 'rgba(255, 255, 255, 0.7)',
                 }}
-              >
-                your bid
-              </div>
+              ></div>
               <div className={'bid-container'}>
                 <div
                   style={{
@@ -833,9 +831,10 @@ export const AuctionCard = ({
             again.
           </span>
         )}
-        {tickSizeInvalid && tickSize && (
-          <span style={{ color: 'red' }}>
-            Tick size is ◎{tickSize.toNumber() / LAMPORTS_PER_MINT}.
+        {tickSize && (
+          <span style={{ color: 'white' }}>
+            Tick size is {(tickSize.toNumber() / LAMPORTS_PER_MINT) * 1000}{' '}
+            $QUACK
           </span>
         )}
         {gapBidInvalid && (
