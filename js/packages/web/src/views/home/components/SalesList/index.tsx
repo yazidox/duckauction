@@ -91,7 +91,12 @@ export const SalesListView = (props: { collectionMintFilter?: string }) => {
                       key={auction.auction.pubkey}
                       to={`/auction/${auction.auction.pubkey}`}
                     >
-                      <AuctionRenderCard auctionView={auction} />
+                      <div
+                        className="duckrowauction"
+                        id={`id${auction.auction.pubkey}`}
+                      >
+                        <AuctionRenderCard auctionView={auction} />
+                      </div>
                     </Link>
                   ))}
               </div>

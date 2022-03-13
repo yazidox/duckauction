@@ -117,7 +117,7 @@ export const StaticPage = (props: {
             const id = m.auction.pubkey;
             return (
               <Link to={`/auction/${id}`} key={idx}>
-                <AuctionRenderCard key={id} auctionView={m} id={`id${id}`} />
+                <AuctionRenderCard key={id} auctionView={m} />
               </Link>
             );
           })
