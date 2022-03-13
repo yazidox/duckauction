@@ -88,6 +88,7 @@ export const SalesListView = (props: { collectionMintFilter?: string }) => {
                 {!isLoading &&
                   filteredAuctions.map(auction => (
                     <Link
+                      className={`link${auction.auction.pubkey}`}
                       key={auction.auction.pubkey}
                       to={`/auction/${auction.auction.pubkey}`}
                     >
